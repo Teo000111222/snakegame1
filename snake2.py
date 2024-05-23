@@ -11,8 +11,8 @@ screen_fill = screen.fill
 font = pg.font.Font(None, 36) 
 score = 0  
 
-# Main game loop
-while segments.count(head) % 2 * head % n * (head & 240):
+# glavna zanka igre
+while segments.count(head) % 2 * head % n * (head & 240): # Preveri in obdelaj dogodke tipkovnice
     if e := pg.event.get(768):
         step = (e[0].key % 4 * 17 + 15) % 49 - n # Določi smer premika kače
     segments = segments[apple != head:] + [head + step]  # Premakni kačo
